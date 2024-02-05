@@ -3,6 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include <assert.h>
+#include <time.h>
 #include "game_shared.h"
 
 static game_t game;
@@ -113,7 +114,8 @@ static void add_tile(void)
       empty[j]->source = NULL;
       empty[j]->move_time = 1;
       empty[j]->appear_time = 0;
-      empty[j]->value = ((float)rand() / RAND_MAX) < 0.9 ? 1 : 2;
+      // empty[j]->value = (rand() / RAND_MAX) < 0.9 ? 1 : 2;
+      empty[j]->value = ((float)rand()/(float)RAND_MAX) < 0.9 ? 1 : 2;
    }
    else
       change_state(STATE_GAME_OVER);
@@ -121,6 +123,7 @@ static void add_tile(void)
 
 void init_game(void)
 {
+   srand(time(NULL));
    memset(&game, 0, sizeof(game));
 
    game.state = STATE_TITLE;
