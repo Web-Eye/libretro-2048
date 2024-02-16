@@ -11,15 +11,15 @@
 
 int SCREEN_PITCH = 0;
 
-static unsigned int color_lut[13];
-static unsigned int color_lut_dark[13];
-static const char* label_lut[13] =
+static unsigned int color_lut[14];
+static unsigned int color_lut_dark[14];
+static const char* label_lut[14] =
 {
    "",
    "2", "4", "8", "16",
    "32", "64", "128", "256",
    "512", "1024", "2048",
-   "XXX"
+   "4096", "8192"
 };
 
 /* LAME DRAW TEXT and FILLRECT */
@@ -277,6 +277,8 @@ static void init_luts(void)
    color_lut_dark[10] = RGB32(100,58,192,255);
    color_lut_dark[11] = RGB32(130,61,209,255);
    color_lut_dark[12] = RGB32(150,85,205,255);
+   color_lut_dark[13] = RGB32(150,85,205,255);
+   color_lut_dark[14] = RGB32(150,85,205,255);
 
    color_lut[0] = RGB32(238,228,218,90);
    color_lut[1] = RGB32(238,228,218,255);
@@ -294,6 +296,8 @@ static void init_luts(void)
    color_lut[10] = RGB32(237,197,63,255);
    color_lut[11] = RGB32(237,194,46,255);
    color_lut[12] = RGB32(60,58,50,255);
+   color_lut[13] = RGB32(60,58,50,255);
+   color_lut[14] = RGB32(60,58,50,255);
 }
 
 static void init_static_surface(void)
