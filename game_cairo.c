@@ -17,14 +17,14 @@ int SCREEN_PITCH = 0;
 static cairo_surface_t *surface = NULL;
 static cairo_surface_t *static_surface = NULL;
 static cairo_t *ctx = NULL;
-static cairo_pattern_t* color_lut[13];
-static const char* label_lut[13] =
+static cairo_pattern_t* color_lut[14];
+static const char* label_lut[14] =
 {
    "",
    "2", "4", "8", "16",
    "32", "64", "128", "256",
    "512", "1024", "2048",
-   "XXX"
+   "4096", "8192"
 };
 
 static uint16_t *frame_buf;
@@ -144,6 +144,8 @@ static void init_luts(void)
    color_lut[10] = cairo_pattern_create_rgb(237 / 255.0, 197 / 255.0, 63 / 255.0);
    color_lut[11] = cairo_pattern_create_rgb(237 / 255.0, 194 / 255.0, 46 / 255.0);
    color_lut[12] = cairo_pattern_create_rgb(60 / 255.0, 58 / 255.0, 50 / 255.0);
+   color_lut[13] = cairo_pattern_create_rgb(60 / 255.0, 58 / 255.0, 50 / 255.0);
+   color_lut[14] = cairo_pattern_create_rgb(60 / 255.0, 58 / 255.0, 50 / 255.0);
 }
 
 static void init_static_surface(void)
@@ -224,7 +226,7 @@ void game_deinit(void)
 {
    int i;
 
-   for (i = 0; i < 13; i++)
+   for (i = 0; i < 15; i++)
    {
       cairo_pattern_destroy(color_lut[i]);
       color_lut[i] = NULL;
