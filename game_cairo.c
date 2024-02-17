@@ -145,7 +145,7 @@ static void init_luts(void)
    color_lut[11] = cairo_pattern_create_rgb(237 / 255.0, 194 / 255.0, 46 / 255.0);
    color_lut[12] = cairo_pattern_create_rgb(60 / 255.0, 58 / 255.0, 50 / 255.0);
    color_lut[13] = cairo_pattern_create_rgb(60 / 255.0, 58 / 255.0, 50 / 255.0);
-   color_lut[14] = cairo_pattern_create_rgb(60 / 255.0, 58 / 255.0, 50 / 255.0);
+   // color_lut[14] = cairo_pattern_create_rgb(60 / 255.0, 58 / 255.0, 50 / 255.0);
 }
 
 static void init_static_surface(void)

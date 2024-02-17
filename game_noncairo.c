@@ -278,7 +278,7 @@ static void init_luts(void)
    color_lut_dark[11] = RGB32(130,61,209,255);
    color_lut_dark[12] = RGB32(150,85,205,255);
    color_lut_dark[13] = RGB32(150,85,205,255);
-   color_lut_dark[14] = RGB32(150,85,205,255);
+   // color_lut_dark[14] = RGB32(150,85,205,255);
 
    color_lut[0] = RGB32(238,228,218,90);
    color_lut[1] = RGB32(238,228,218,255);
@@ -297,7 +297,7 @@ static void init_luts(void)
    color_lut[11] = RGB32(237,194,46,255);
    color_lut[12] = RGB32(60,58,50,255);
    color_lut[13] = RGB32(60,58,50,255);
-   color_lut[14] = RGB32(60,58,50,255);
+   // color_lut[14] = RGB32(60,58,50,255);
 }
 
 static void init_static_surface(void)
